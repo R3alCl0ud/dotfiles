@@ -65,7 +65,7 @@ context.modules = [
                 node.name = "game-sink.output"
                 node.passive = true
                 audio.position = [ FL FR ]
-                target.object = "alsa_output.pci-0000_10_00.4.analog-stereo"
+                target.object = "$REPLACE_WITH_ACTUAL_OUTPUT_SINK"
                 node.description = "Game Audio Output"
                 stream.dont-remix = true
             }
@@ -83,7 +83,7 @@ context.modules = [
                 node.name = "bgm-sink.monitor"
                 node.passive = true
                 audio.position = [ FL FR ]
-                target.object = "alsa_output.pci-0000_10_00.4.analog-stereo"
+                target.object = "$REPLACE_WITH_ACTUAL_OUTPUT_SINK"
                 node.description = "BGM Output"
                 stream.dont-remix = true
             }
