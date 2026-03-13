@@ -1,8 +1,5 @@
-from email.mime import audio
-
 from simple_term_menu import TerminalMenu
 import audioconfig.audioconfig as ac
-
 
 def main():
     copy: bool = (ask_symlink_or_copy() == 0)
