@@ -1,0 +1,44 @@
+export ZSH="/home/neptune/.oh-my-zsh"
+
+# AF-MAGIC is my favorite theme
+ZSH_THEME="af-magic"
+
+
+
+# Which plugins would you like to load?
+# Standard plugins can be found in $ZSH/plugins/
+# Custom plugins may be added to $ZSH_CUSTOM/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+# Add wisely, as too many plugins slow down shell startup.
+plugins=(git tmux)
+
+source $ZSH/oh-my-zsh.sh
+
+# User configuration
+# Make RADV the default vulkand implementation
+export AMD_VULKAN_ICD=RADV
+# omg it invader vim
+export EDITOR=vim
+
+# wayland stuff
+if [ "$XDG_SESSION_TYPE" = "wayland" ]; then
+    export MOZ_ENABLE_WAYLAND=1
+    export GUAKE_ENABLE_WAYLAND=1
+fi
+
+# Set personal aliases, overriding those provided by oh-my-zsh libs,
+# plugins, and themes. Aliases can be placed here, though oh-my-zsh
+# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# For a full list of active aliases, run `alias`.
+
+
+alias sosf="echo "Starting" && sh ~/Documents/OpenSeeFace/start.sh"
+alias wiresinks="~/.config/pipewire/wiresinks.sh"
+alias startbgm="ts bgm 'mpv ~/Music/Neptune/VTuber/Harp\ Jam.wav --ab-loop-a=19.59 --ab-loop-b=196 --volume=75 --audio-device=pulse/bgm-sink'"
+alias updoots="checkupdates"
+
+alias primerun="~/.myscripts/primerun.sh"
+
+
+
+

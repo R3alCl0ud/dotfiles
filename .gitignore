@@ -1,8 +1,7 @@
-
 start.log
-
 .idea/
 .venv
 dotfiles
 audioconfig/generated
 *.pyc
+audioconfig/pipewire/generated/

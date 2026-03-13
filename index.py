@@ -5,7 +5,7 @@ def main():
     copy: bool = (ask_symlink_or_copy() == 0)
     print("Final configs will be copied to destination" if copy else "Final configs will be symlinked to destination")
     status = ac.main(copy=copy)
-    if status is Exception:
+    if status is not True:
         print(status)
 
 def ask_symlink_or_copy():
