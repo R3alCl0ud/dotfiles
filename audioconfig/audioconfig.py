@@ -56,7 +56,6 @@ def symlink_configs():
         for suffix in ["", "/generated"]:
             for entry in os.scandir(f"{program[0]}{suffix}"):
                 if entry.is_file() and entry.name.endswith(".conf"):
-                    # print(entry.path)
                     os.symlink(entry.path, f"{program[1]}/{entry.name}")
 
 
@@ -66,7 +65,6 @@ def copy_configs():
         for suffix in ["", "/generated"]:
             for entry in os.scandir(f"{program[0]}{suffix}"):
                 if entry.is_file() and entry.name.endswith(".conf"):
-                    # print(entry.path)
                     shutil.copy(entry.path, f"{program[1]}/{entry.name}")
 
 
